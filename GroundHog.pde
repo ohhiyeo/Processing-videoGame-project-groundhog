@@ -173,10 +173,7 @@ void initGame(){
     else if(cabbageOrClock==1){
       items[i]=new Clock(newX,newY);
     }
-		// Requirement #3:
-		// 	- Randomly decide if a cabbage or a clock should appear in a random soil every 4 rows (6 items in total)
-		// 	- Create and store cabbages/clocks in the same items array
-		// 	- You can use the above newX/newY to set their position in constructor
+		
 
 	}
 }
@@ -213,8 +210,7 @@ void draw() {
 	    fill(253,184,19);
 	    ellipse(590,50,120,120);
 
-	    // CAREFUL!
-	    // Because of how this translate value is calculated, the Y value of the ground level is actually 0
+	   
 		pushMatrix();
 		translate(0, max(SOIL_SIZE * -22, SOIL_SIZE * 1 - player.y));
 
@@ -244,7 +240,7 @@ void draw() {
 		image(sweethome, 0, SOIL_ROW_COUNT * SOIL_SIZE);
 
 		// Items
-		// Requirement #3: Display and check collision with player for each item in Item[] items
+		
     for(int i=0;i<items.length;i++){
     items[i].display();
     items[i].checkCollision(player);
